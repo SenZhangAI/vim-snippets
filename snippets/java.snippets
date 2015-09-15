@@ -285,3 +285,110 @@ snippet ru
 	unauthorized(${1:param});
 snippet unless
 	(unless=${1:param});
+##
+## IntelliJ IDEA's snippets
+### Main method
+snippet psvm
+	public static void main (String[] args) {
+		${0}
+	}
+### Print method
+snippet soutt
+	System.out.print("${0:Message}");
+snippet souf
+	System.out.printf("${1:Message}", ${0:args});
+snippet sout
+	System.out.println(${0:Message});
+snippet soutp
+	System.out.println("args = [" + args + "]");
+snippet serr
+	System.err.println("${0:Message}");
+### Loop
+snippet fori
+	for (int ${1:i} = 0; $1 < ${2}; $1++) {
+		${3}
+	}
+snippet I
+	if (${1:Object} ${2:o} : ${3}) {
+		${4}
+	}
+snippet iter
+	if (${3:Object} ${2:o} : ${1}) {
+		${4}
+	}
+snippet itar
+	for (int ${1:i} = 0; $1 < ${2:my_arrays}.length; $1++) {
+		${3:Object} ${4:my_arrays_item} = $2[$1];
+		${4}
+	}
+snippet itco
+	for (Iterator ${1:iterator} = ${2:my_collection}.iterator(); $1.hasNext(); ) {
+		${3:Object} ${4:next} = $1.next();
+		${5}
+	}
+snippet iten
+	while (${1:my_enumeration}.hasMoreElements()) {
+		${2:Object} ${3:nextElement} = $1.nextElement();
+		${4}
+	}
+snippet itit
+	while (${1:iterator}.hasNext()) {
+		${2:Object} ${3:next} = $1.next();
+		${4}
+	}
+snippet itli
+	for (int ${1:i} = 0; $1 < ${2:my_list}.size(); $1++) {
+		${3:Object} ${4:o} = $2.get($1);
+		${5}
+	}
+snippet ittok
+	for (StringTokenizer ${1:my_stringTokenizer} = new StringTokenizer(${2}); $1.hasMoreTokens(); ) {
+		String ${3:s} = $1.nextToken();
+		${4}
+	}
+snippet itve
+	for (int ${1:i} = 0; $1 < ${2:my_vector}.size(); $1++) {
+		${3:Object} ${4:elementAt} = $2.elemetAt($1);
+		${5}
+	}
+snippet ritar
+	for (int ${1:i} = ${2:my_arrays}.length-1 ; $1 >= 0; $1--) {
+		${3:Object} ${4:my_arrays_item} = $2[$1];
+		${4}
+	}
+### isNull
+#### if == null
+snippet ifn
+	if (${1:my_instace} == null) {
+		${2}
+	}
+#### if != null
+snippet inn
+	if (${1:my_instace} != null) {
+		${2}
+	}
+### Miscellaneous:
+snippet lst
+	${1:my_arrays}[$1.length -1] ${2}
+snippet mn
+	${1} = Math.min($1, ${2});
+	${3}
+snippet mx
+	${1} = Math.max($1, ${2});
+	${3}
+#### instanceof
+snippet inst
+	if (${1:my_instance} instanceof ${2:Object}) {
+		$2 ${3:o} = ($2) $1;
+		${4}
+	}
+#### toArray
+snippet toar
+	${2:my_target}.toArray(new ${1:Object}[$2.size()]) ${3}
+### plain
+snippet psf
+	public static final ${1}
+snippet psfi
+	public static final int ${1}
+snippet psfs
+	public static final String ${1}
