@@ -133,6 +133,7 @@ snippet lld
 	}
 ##
 ## my addtion snippet
+### itar
 snippet itve
 	for (vector<${1:int}>::iterator ${2:iter} = ${3:ivec}.begin(); $2 != $3.end(); $2++) {
 		${4}
@@ -141,3 +142,8 @@ snippet citve
 	for (vector<${1:int}>::const_iterator ${2:citer} = ${3:ivec}.begin(); $2 != $3.end(); $2++) {
 		${4}
 	}
+### for quick test
+snippet cktyp
+	std::cout << "${1:int} 's type is " << typeid($1).name() << std::endl;
+snippet ckval
+	std::cout << "${1:data} 's value is " << $1 << std::endl;
