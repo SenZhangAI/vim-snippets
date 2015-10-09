@@ -102,6 +102,8 @@ snippet cout
 # std::cin
 snippet cin
 	std::cin >> ${1};
+snippet cerr
+	std::cerr << "Error: ${1:ErrorMessage}" << std::endl;
 ##
 ## Iteration
 # for i
@@ -170,6 +172,12 @@ snippet tpc
 	private:
 		${0:/* data */}
 	};
+snippet tps
+	template <${1:class T}>
+	struct ${2:`vim_snippets#Filename('$1', 'name')`}
+	{
+		${3};
+	}
 ### if
 #### if == 0
 snippet if0
