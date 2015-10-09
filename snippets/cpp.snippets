@@ -183,3 +183,22 @@ snippet tpc
 	private:
 		${0:/* data */}
 	};
+### if
+#### if == 0
+snippet if0
+	if (${1} == 0) {
+		${2}
+	}
+snippet ifn0
+	if (${1} != 0) {
+		${2}
+	}
+snippet ifn
+	if (${1} == null) {
+		${2}
+	}
+#### if != null
+snippet ifnn
+	if (${1} != null) {
+		${2}
+	}
