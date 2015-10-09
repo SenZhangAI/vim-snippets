@@ -165,3 +165,21 @@ snippet cktyp
 	std::cout << "${1:int} 's type is " << typeid($1).name() << std::endl;
 snippet ckval
 	std::cout << "${1:data} 's value is " << $1 << std::endl;
+### template
+snippet tp
+	template <${1:class T}>
+	${2}
+snippet tp2
+	template <${1:class T1}, ${2:class T2}>
+	${3}
+snippet tpc
+	template <${1:class T}>
+	class ${2:`vim_snippets#Filename('$1', 'name')`}
+	{
+	public:
+		$2(${3});
+		~$2();
+
+	private:
+		${0:/* data */}
+	};
